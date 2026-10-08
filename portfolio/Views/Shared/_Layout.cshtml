@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sibonelo Mpanza | Junior Software Developer Portfolio</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            900: '#0b0f19',
+                            800: '#0f172a',
+                            700: '#1e293b',
+                            600: '#334155',
+                        },
+                        accent: {
+                            orange: '#ff4500',
+                            blue: '#00d2ff',
+                            purple: '#7928ca'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    },
+                    boxShadow: {
+                        'glow-orange': '0 0 25px rgba(255, 69, 0, 0.4)',
+                        'glow-blue': '0 0 25px rgba(0, 210, 255, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b0f19; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff4500; }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 15% 20%, rgba(255, 69, 0, 0.12) 0%, transparent 40%), radial-gradient(circle at 85% 80%, rgba(0, 210, 255, 0.1) 0%, transparent 40%);
+        }
+    </style>
+</head>
+<body style="background-color: #0b0f19 !important; color: #f3f4f6 !important;" class="bg-dark-900 text-gray-100 font-sans antialiased hero-gradient selection:bg-accent-orange selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#home" class="text-xl font-bold font-mono tracking-wider text-white flex items-center gap-2">
+                <span class="text-accent-orange">&lt;</span>SM<span class="text-accent-blue">/&gt;</span>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm text-gray-300">
+                <a href="#about" class="hover:text-accent-orange transition-colors">About</a>
+                <a href="#projects" class="hover:text-accent-orange transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-accent-orange transition-colors">Skills & Stack</a>
+                <a href="#certs" class="hover:text-accent-orange transition-colors">Certifications</a>
+                <a href="#contact" class="hover:text-accent-orange transition-colors">Contact</a>
+            </nav>
+
+           <div class="hidden md:flex items-center gap-4">
+                <!-- Request CV Button -->
+                <a href="mailto:Sibonelompanza60@gmail.com?subject=Request%20for%20CV%20-%20Software%20Developer%20Role" class="px-4 py-2.5 rounded-xl text-sm font-semibold text-gray-200 glass-card border border-gray-700 hover:border-accent-blue hover:text-accent-blue flex items-center gap-2 transition-all duration-300">
+                    <i class="fa-solid fa-envelope text-accent-blue"></i> Request CV
+                </a>
+
+                <a href="mailto:Sibonelompanza60@gmail.com?subject=Job%20Opportunity%20-%20Software%20Engineer%20Role" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-accent-orange to-red-600 shadow-lg shadow-accent-orange/20 hover:shadow-glow-orange hover:-translate-y-0.5 transition-all duration-300">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE RENDER AREA -->
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="py-8 px-6 border-t border-gray-800 text-center text-xs text-gray-500 font-mono bg-dark-900">
+        <p>&copy; 2026 Sibonelo Mpanza. All rights reserved. 💜</p>
+    </footer>
+</body>
+</html>
